@@ -20,6 +20,11 @@ interface ContributionWeek {
   contributionDays: ContributionDay[]
 }
 
+interface MonthLabel {
+  month: string
+  weekIndex: number
+}
+
 export function GitHubInsights() {
   const [stats, setStats] = useState<GitHubStats | null>(null)
   const [loading, setLoading] = useState(true)
@@ -154,7 +159,7 @@ function ContributionGraph() {
   }, [])
 
   const getColorClass = (count: number): string => {
-    if (count === 0) return "bg-gray-400/20 dark:bg-gray-600/30" // Glass gray instead of white
+    if (count === 0) return "bg-gray-400/20 dark:bg-gray-600/30"
     if (count < 4) return "bg-[#9be9a8] dark:bg-[#0e4429]"
     if (count < 8) return "bg-[#40c463] dark:bg-[#006d32]"
     if (count < 12) return "bg-[#30a14e] dark:bg-[#26a641]"
@@ -162,10 +167,10 @@ function ContributionGraph() {
   }
 
   // Get month labels from the weeks data
-  const getMonthLabels = () => {
+  const getMonthLabels = (): MonthLabel[] => {
     if (!contributions.length) return []
     
-    const months = []
+    const months: MonthLabel[] = []
     const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     
     // Get the first day of each month that appears in the contribution data
