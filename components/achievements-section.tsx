@@ -11,19 +11,19 @@ export function AchievementsSection() {
       rank: "2nd 🇹🇳",
       year: "2025",
       desc: "Solved advanced algorithmic problems under 24h pressure",
+    },{
+      competition: "AI Wave Hackathon 2.0",
+      rank: "Finalist",
+      year: "2025",
+      desc: "Built ML-based mental health monitoring platform",
     },
     {
-      competition: "Code of Duty",
+      competition: "Coding Olympics 2024",
       rank: "2nd",
       year: "2024",
       desc: "Competitive coding challenge, focused on data structures & algorithms",
-    },
-    {
-      competition: "AI Wave Hackathon 2.0",
-      rank: "Finalist",
-      year: "2024",
-      desc: "Built ML-based mental health monitoring platform",
-    },
+    }
+    ,
     {
       competition: "GDG Sousse",
       rank: "Organizer",
