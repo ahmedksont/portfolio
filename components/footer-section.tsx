@@ -80,7 +80,6 @@ export function FooterSection() {
 
           <div className="text-sm text-muted-foreground">
             <p>© 2025 Ahmed Ksontini. All rights reserved.</p>
-            <p className="mt-2">Built with Next.js and Tailwind CSS </p>
           </div>
         </div>
       </div>
